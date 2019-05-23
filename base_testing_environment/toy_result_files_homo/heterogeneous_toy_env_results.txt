@@ -1,0 +1,7 @@
+NN: mean: 0.58, std: 0.4935585071701227, percent of zeros: 0.583
+NN: mean: 0.594, std: 0.49108451411136966, percent of zeros: 0.583
+NN w/ embedding: mean: 0.94, std: 0.23748684174075838, percent of zeros: 0.583
+NN w/ embedding: mean: 0.94, std: 0.23748684174075838, percent of zeros: 0.583
+NN w/ embedding: mean: 0.94, std: 0.23748684174075838, percent of zeros: 0.583
+NN w/ embedding: mean: 0.94, std: 0.23748684174075838, percent of zeros: 0.583
+NN w/ embedding: mean: 0.94, std: 0.23748684174075838, percent of zeros: 0.583
