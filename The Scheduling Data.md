@@ -2,8 +2,6 @@
 
 ---------------
 
-In this .md, I will explain the scheduling data while going through one of the files I used to train a BNN ([link to github file that will be discussed](https://github.gatech.edu/rpaleja3/Scheduling_env/blob/master/Neural_Networks/Pairwise/bnn_only_task.py)) 
-
 ### Features in the Scheduling Data
 
 - Pairwise
@@ -32,7 +30,7 @@ A final note is that you can create new data fairly quickly using a file called 
 
 -------
 
-### Going through `bnn_only_task.py`
+### Going through `nn_only_task.py`
 
 1. Load in the .pkl file corresponding to the number of schedules you would like to train on, using `pickle.load(open(self.load_directory, "rb"))`
 2. `self.create_new_data()`
@@ -52,7 +50,7 @@ For a random timestep within a random schedule:
 	task scheduled = Find the task that was scheduled
 	for each task not including task scheduled:
 		diff = task_scheduled_features - each_task_not_scheduled_features
-		output = BNN.forward_pass(diff)
+		output = NN.forward_pass(diff)
 		Expected_Output is 1
 		# NOTE NOW THE OUTPUT IS [1 0]
     for each task not including task scheduled:
@@ -72,12 +70,12 @@ For each task:
 			continue
 		else: 
 			diff = each_task_features - each_other_task_features
-			preference = BNN.forward_pass(diff)
+			preference = NN.forward_pass(diff)
 			store preference in matrix of size total_tasks by total_tasks
 		
 Sum over columns of matrix
 Task to schedule = argmax
 
-Then, update Bayesian parameter using training procedure
+Then, update parameters using training procedure
 ```
 
